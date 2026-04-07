@@ -3,19 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIM 4D/5D - Portfólio</title>
+
+<title>BIM 4D/5D — BIM Consultivo</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
-.hero{padding:60px 48px;}
+:root{
+  --bg:#1e3447;
+  --blue:#2a6496;
+  --orange:#DA7756;
+}
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:#fff;
+}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  padding:16px 48px;
+  font-size:11px;
+  letter-spacing:1.5px;
+}
+
+.hero{
+  padding:60px 48px;
+}
+
 .hero-layout{
   display:grid;
   grid-template-columns:minmax(320px,680px) minmax(320px,760px);
   gap:48px;
   align-items:center;
 }
-.hero-left{min-width:0;}
-.hero-right{min-width:0;}
 
 .hero-tag{
   display:inline-block;
@@ -23,16 +45,22 @@ body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
   padding:6px 12px;
   border-radius:6px;
   font-size:11px;
-  letter-spacing:1px;
   margin-bottom:16px;
 }
 
-.hero h1{font-size:36px;line-height:1.2;margin-bottom:16px;}
-.hero p{opacity:.8;max-width:580px;}
+.hero h1{
+  font-size:36px;
+  margin-bottom:16px;
+}
+
+.hero p{
+  opacity:.75;
+  max-width:580px;
+  line-height:1.6;
+}
 
 .pipeline{
   display:flex;
-  align-items:center;
   flex-wrap:wrap;
   gap:8px;
   margin-top:36px;
@@ -46,7 +74,7 @@ body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
   font-size:11px;
 }
 
-.p-arrow{color:#DA7756;}
+.p-arrow{color:var(--orange);}
 
 @media(max-width:1100px){
   .hero-layout{grid-template-columns:1fr;}
@@ -56,11 +84,17 @@ body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
 
 <body>
 
+<header class="site-header">
+  <div>PROJETO BIM CONSULTIVO</div>
+  <div>DEMONSTRAÇÃO DE PROCESSO · BIM 4D/5D</div>
+</header>
+
 <section class="hero">
 
   <div class="hero-layout">
 
-    <div class="hero-left">
+    <!-- ESQUERDA -->
+    <div>
       <div class="hero-tag">Caso Demonstrativo</div>
 
       <h1>
@@ -69,23 +103,24 @@ body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
       </h1>
 
       <p>
-        Este documento apresenta o processo completo de estruturação de um modelo BIM integrado ao cronograma físico e ao orçamento analítico.
+        Este documento apresenta o processo completo de estruturação de um modelo BIM integrado ao cronograma físico e ao orçamento analítico de uma edificação multiandar — do modelo Revit à simulação 5D no Navisworks.
       </p>
     </div>
 
-    <div class="hero-right">
+    <!-- DIREITA -->
+    <div>
 
       <div style="text-align:center; margin-bottom: 18px;">
         <div style="display:inline-block; padding:6px 12px; border:1px solid rgba(218,119,86,0.35); border-radius:6px; color:#DA7756; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px;">
           Demonstração prática
         </div>
 
-        <h2 style="font-size:28px; margin-bottom:10px;">
+        <h2 style="font-size:28px;">
           Veja o processo 4D/5D em funcionamento
         </h2>
 
         <p style="opacity:.7;">
-          Visualização da integração entre modelo, cronograma e orçamento.
+          Visualização da integração entre modelo BIM, cronograma e orçamento.
         </p>
       </div>
 
@@ -101,8 +136,10 @@ body{margin:0;font-family:Arial;background:#1e3447;color:#fff;}
       </div>
 
     </div>
+
   </div>
 
+  <!-- PIPELINE -->
   <div class="pipeline">
     <span class="p-badge">01 · Modelagem BIM</span><span class="p-arrow">→</span>
     <span class="p-badge">02 · EAP</span><span class="p-arrow">→</span>
