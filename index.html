@@ -23,9 +23,45 @@ body{font-family:'Sora',system-ui,sans-serif;background:var(--bg);color:var(--da
 .hero h1{color:#fff;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.15;max-width:680px;margin-bottom:14px;}
 .hero h1 em{font-style:normal;color:var(--blue-lt);}
 .hero p{color:rgba(255,255,255,0.6);font-size:15px;max-width:580px;line-height:1.7;margin-bottom:36px;}
-.pipeline{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
-.p-badge{background:rgba(42,100,150,0.2);border:1px solid rgba(93,147,196,0.4);color:#fff;font-size:11px;font-weight:700;padding:7px 14px;border-radius:6px;white-space:nowrap;}
-.p-arrow{color:var(--orange);font-size:16px;opacity:.7;}
+.pipeline{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+  padding-bottom:6px;
+  scrollbar-width:thin;
+}
+
+.pipeline::-webkit-scrollbar{
+  height:6px;
+}
+
+.pipeline::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.18);
+  border-radius:999px;
+}
+
+.p-badge{
+  background:rgba(42,100,150,0.2);
+  border:1px solid rgba(93,147,196,0.4);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  padding:7px 14px;
+  border-radius:6px;
+  white-space:nowrap;
+  flex:0 0 auto;
+}
+
+.p-arrow{
+  color:var(--orange);
+  font-size:16px;
+  opacity:.7;
+  flex:0 0 auto;
+}
 .wrapper{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
 .metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 40px;}
 .metric-card{background:white;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;}
